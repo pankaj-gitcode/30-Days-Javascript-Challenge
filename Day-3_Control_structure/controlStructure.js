@@ -33,6 +33,145 @@ const largestNum = ()=> [num1,num2,num3].reduce((accum, elem)=>{
 });
 console.log(`Largest sum is: ${[num1,num2,num3]} is ${largestNum()}`);
 
+// ----------------- Activity 3: Switch Case ---------------------------
+
+// Task 4: Write a program that uses a switch case to determine the day of the week based on a number (1-7) and log the day name to the console.
+
+//import readline
+const readline = require('readline').createInterface({
+    input: process.stdin,
+    output: process.stdout
+  });
+  
+  //new promise
+  const userChoice = ()=>{
+    return new Promise((resolve, reject)=>{
+      readline.question(`Enter any weekdays[1-7]: `, resolve)
+    })
+  }
+  
+  //switch function
+  const weekDays = (num)=>{
+    switch(true){
+      case num == 1:
+        console.log(`1=>Monday`);
+        break;
+      case num ==2:
+        console.log(`2=>Tuesday`);
+        break;
+      case num == 3:
+        console.log(`3=>Wednesday`);
+        break;
+      case num == 4:
+        console.log('4=>Thursday');
+        break;
+      case num == 5:
+        console.log(`5=>Friday`);
+        break;
+      case num == 6:
+        console.log(`6=>Saturday`);
+        break;
+      case num == 7:
+        console.log(`7=>Sunday`);
+        break;
+      default:
+        console.log(`${num} is INVALID CHOICE!!`);
+    }
+  }
+  
+  //async/await
+  (async function(){
+    try{
+      
+    const day = parseInt(await userChoice());
+    weekDays(day);
+    }
+    catch(err){console.log(`ERROR: ${err.message}`)}
+    finally{readline.close()}
+  })()
+
+// Task 5: Write a program that uses a switch case to assign a grade ('A', 'B', 'C', 'D', 'F) based on a score and log the grade to the console.
+
+// const rl = require('readline').createInterface({input:process.stdin, output:process.stdout});
+
+// //grade function
+// const gradeFunc = (grades)=>{
+//     const grade = grades.toLowerCase();
+//     switch(true){
+//         case grade == 'a':
+//             console.log(`\nA=>Outstanding`);
+//             break;
+//         case grade == 'b':
+//             console.log('\nB => Excellent');
+//             break;
+//         case grade == 'c': 
+//             console.log(`\nC=>Good`);
+//             break;
+//         case grade == 'd':
+//             console.log('\nd=>Can Be Better');
+//             break;
+//         case grade == 'e':
+//             console.log(`\ne=>Try again`);
+//             break;
+//         default:
+//             console.log(`\nINVALID CHOICE`);
+//     }
+// }
+
+// //promise
+// const usersChoice = ()=>{
+//     return new Promise((resolve, reject)=>{
+//         rl.question(`Enter your grade: `, resolve)
+       
+//     })
+//     .then(grade=>gradeFunc(grade))
+//     .catch(err=>console.log(err))
+//     .finally(()=>rl.close());
+// }
+// //Invoke userChoice()
+// usersChoice();
+
+
+const rl = require('readline').createInterface({input:process.stdin, output:process.stdout});
+
+//grade function
+const gradeFunc = (grades)=>{
+    const grade = grades.toLowerCase();
+    switch(true){
+        case grade == 'a':
+            console.log(`\nA=>Outstanding`);
+            break;
+        case grade == 'b':
+            console.log('\nB => Excellent');
+            break;
+        case grade == 'c': 
+            console.log(`\nC=>Good`);
+            break;
+        case grade == 'd':
+            console.log('\nD=>Can Be Better');
+            break;
+        case grade == 'e':
+            console.log(`\nE=>Try again`);
+            break;
+        default:
+            console.log(`\nINVALID CHOICE`);
+    }
+}
+
+//promise
+const usersChoice = ()=>{
+    return new Promise((resolve, reject)=>{
+        rl.question(`Enter your grade: `, resolve)
+        
+    })
+    .then(grade=>gradeFunc(grade))
+    .catch(err=>console.log(err.message))
+    .finally(()=>rl.close())
+}
+usersChoice();
+
+
+
 
 // --------------------- Activity 4: Conditional (Ternary) Operator ---------------------
 // Task 6: Write a program that uses the ternary operator to check if a number is even or odd and log the result to the console.
