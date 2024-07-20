@@ -36,13 +36,24 @@ const maxOfTwoNum = (num1, num2)=>num1>num2?`${num1} is greater than ${num2}`: `
 
 // . Task 4: Write a function expression to concatenate two strings and return the result.
 const concatFunc = (num1, num2)=>`${num1}` + `${num2}`;
-console.log(`COncatination of 828 & 676 is ${concatFunc(828, 676)}`);
+// console.log(`COncatination of 828 & 676 is ${concatFunc(828, 676)}`);
 
 // ---------------------- Activity 3: Arrow Functions ------------------------
 
 // . Task 5: Write an arrow function to calculate the sum of two numbers and return the result.
+const numArry = [1,2,12,13,17,15,19,0];
+const n1 = numArry[Math.floor(Math.random()*numArry.length)];
+const n2 = numArry[Math.floor(Math.random()*numArry.length)];
+
+const sumOfTwoNums = (num1, num2)=>num1+num2;
+console.log(`Sum of ${n1} & ${n2}: ${sumOfTwoNums(n1,n2)}`)
 
 // . Task 6: Write an arrow function to check if a string contains a specific character and return a boolean value.
+const charIncluded = (char)=>{
+    const str = 'hello raj';
+    return str.includes(char)
+}
+console.log(charIncluded('hello'));
 
 // ---------------------- Activity 4: Function Parameters and Default Values ------------------------
 
