@@ -24,10 +24,13 @@
 # Activity 4: Nested Loops
 
 . Task 7: Write a program to print a pattern using nested for loops:
-
-
-
-
+<!--
+            *
+            **
+            ***
+            ****
+            ***** 
+-->
 # Activity 5: Loop Control Statements
 
 . Task 8: Write a program to print numbers from 1 to 10, but skip the number 5 using the continue statement.

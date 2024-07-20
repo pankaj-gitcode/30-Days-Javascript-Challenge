@@ -49,6 +49,23 @@ while(gamePlaying){
     else gamePlaying = false;
 }
 
+// ------------------------ Activity 3: Do ... While Loop -------------------
+
+// . Task 5: Write a program to print numbers from 1 to 5 using a do ... while loop. do{logic}while(condition);
+const print1To5 = (n)=>{
+    let num = 1;
+    do{
+        console.log(num);
+        num +=1;
+    }while(num <n);
+    return num;
+}
+console.log(print1To5(5))
+
+// . Task 6: Write a program to calculate the factorial of a number using a do ... while loop.
+
+
+
 
 // -------------------- Activity 4: Nested Loops --------------------------
 
@@ -70,20 +87,14 @@ const rightAngledTriangle = ()=>{
 }
 // console.log(rightAngledTriangle())
 
-function printPyramid(n) {
-    for (let i = 1; i <= n; i++) {
-      let str = '';
-      for (let j = 1; j <= n - i; j++) {
-        str += ' '; // Adding spaces
-      }
-      for (let k = 0; k < 2 * i - 1; k++) {
-        str += '*'; // Adding stars
-      }
-      console.log(str);
-    }
-  }
-  
-  printPyramid(5);
+// -------------------- Activity 5: Loop Control Statements -------------------------
+
+// . Task 8: Write a program to print numbers from 1 to 10, but skip the number 5 using the continue statement.
+
+
+// . Task 9: Write a program to print numbers from 1 to 10, but stop the loop when the number is 7 using the break statement.
+
+
   
 
 
