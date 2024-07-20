@@ -60,11 +60,30 @@ const print1To5 = (n)=>{
     }while(num <n);
     return num;
 }
-console.log(print1To5(5))
+// console.log(print1To5(5))
 
 // . Task 6: Write a program to calculate the factorial of a number using a do ... while loop.
 
-
+const factN = (n)=>{
+    // 4! = 4x3x2x1
+    let fact = 1;
+    for(let i=n; i>0; i--){
+        
+        fact = fact * i;
+    }
+    
+    return fact
+}
+// console.log(`Factorial of ${factN(4)}`)
+const factorial = (num)=>{
+    let fact = 1;
+    do{
+        fact = fact * num;
+        num--;
+    }while(num>=1);
+        console.log(fact)
+}
+console.log(`Factorial of ${factorial(5)}`)
 
 
 // -------------------- Activity 4: Nested Loops --------------------------
