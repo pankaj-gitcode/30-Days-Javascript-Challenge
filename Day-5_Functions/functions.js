@@ -53,16 +53,26 @@ const charIncluded = (char)=>{
     const str = 'hello raj';
     return str.includes(char)
 }
-console.log(charIncluded('hello'));
+// console.log(charIncluded('hello'));
 
 // ---------------------- Activity 4: Function Parameters and Default Values ------------------------
 
 // . Task 7: Write a function that takes two parameters and returns their product. Provide a default value for the second parameter.
+const multiplicationFunc = (a, b=2)=>{
+    const res = parseInt(a * b);
+    return res
+}
+console.log("Multiplication of 5x1: ", multiplicationFunc(5,1));
 
 // . Task 8: Write a function that takes a person's name and age and returns a greeting message. Provide a default value for the age.
+const greetingsFunc = (name, age)=>console.log(`Hi ${name}, You must be ${age} years. old to join this party!`);
+console.log(greetingsFunc('Raj', 18));
+
+console.log("dirname: ",__dirname);
 
 // ---------------------- Activity 5: Higher-Order Functions ------------------------
 
 // . Task 9: Write a higher-order function that takes a function and a number, and calls the function that many times.
+
 
 // . Task 10: Write a higher-order function that takes two functions and a value, applies the first function to the value, and then applies the second function to the result.
